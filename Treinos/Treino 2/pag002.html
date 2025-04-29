@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino 2 de JS</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let nota1 = Number(prompt('Digite a sua primeira nota:'))
+        let nota2 = Number(prompt('Digite a sua segunda nota:'))
+        let nota3 = Number(prompt('Digite a sua terceira nota:'))
+        let resul = nota1 + nota2 + nota3
+        let soma = resul / 3
+        let media = soma.toFixed(1)
+        if( media >=7.0 ){
+            console.log('Você passou de8 ano! Parabéns!!  :)  A sua nota foi ' + media)
+            alert('Você passou de ano! Parabéns!!  :)  A sua nota foi ' + media)
+            document.write('Agora que você passou de ano, posso te presentear!!  :)')
+        } else{
+            console.log('Você infelizmente reprovou de ano!!  :(  A sua nota foi ' + media)
+            alert('Você infelizmente reprovou de ano!!  :(  A sua nota foi ' + media)
+            document.write('Já que você reprovou de ano, vou ter que te punir com uma chinelada!!  :(')
+        }
+    </script>
+</body>
+</html>

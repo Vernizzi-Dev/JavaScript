@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino 2 de JS</title>
+</head>
+<body>
+
+
+    <script>
+        let idade = prompt('Digite a sua idade:')
+        let sexo = prompt('Digite o seu sexo: (M), (F) ou (O)')
+        if( idade >= 18 ){
+            console.log('Você é uma pessoa maior de idade!! :)')
+        } else{
+            console.log('Você é uma pessoa menor de idade!! :(')
+        }
+        if( sexo == 'M' || sexo == 'F'){
+            console.log('Você é uma pessoa "Normal"!')
+            document.write('Você é uma pessoa "NORMAL"!!')
+        } else{
+            console.log('Você dá muito é seu CU rapá! :(')
+        }
+        if( idade >= 18 && sexo == 'M'){
+            console.log('Você é um Homem maior de idade, então já pode ir para o cabaré!')
+        }
+        if( idade >= 18 && sexo == 'F'){
+            console.log('Você já é uma mulher adulta, pode lavar bastante roupa e cueca suja!  :)')
+        }
+        if( idade >= 18 && sexo == 'O'){
+            console.log('Você já é uma "Pessoa" adulte, agora já pode ser queimade!  :)')
+        }
+        if( idade < 18 && sexo == 'M'){
+            console.log('Você ainda é um menino, não pode ir ao Cabaré, então se contente na punheta! :(')
+        }
+        if( idade < 18 && sexo =='F'){
+            console.log('Você ainda é apenas uma menina, então se contente em lavar apenas as roupas das suas bonecas!! :)')
+        }
+        if( idade < 18 && sexo == 'O'){
+            console.log('Você ainda não é adulte, então como ainda não pode ser queimade, vou só te beliscar!! :)  :)')
+        }
+    </script>
+</body>
+</html>
