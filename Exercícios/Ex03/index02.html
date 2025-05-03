@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando DOM</title>
+    <style>
+        html, body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        #titu-1{
+            font-size: 4vw;
+            padding: 3vw;
+            text-align: center;
+        }
+        #sub-titu{
+            text-align: center;
+            padding: 2vw;
+        }
+        #button{
+            color: rgb(90, 74, 10);
+            display: block;
+            width: 30vw;
+            padding: 3vw;
+            margin: auto;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.699);
+            border-radius: 2vw;
+            transition: 0.4s;
+            font-size: 2vw;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+        #button:hover{
+            transform: scale(1.1);
+            transition: 0.7s;
+        }
+    </style>
+</head>
+<body>
+      <h1 id="titu-1"></h1>
+      <h2 id="sub-titu"></h2>
+      <div id="button"></div>
+
+
+
+    <script>
+        let body = document.body
+        let titu = document.getElementById('titu-1')
+        let subtitu = document.getElementById('sub-titu')
+        let button = document.getElementById('button')
+
+
+        alert('Vamos ver se você é bom em matemática!')
+        let result = prompt('Qual é o resultado da expressão 5.(8 + 36)')
+        if(result == 220){
+            console.log('Você é muito bom! acertou a expressão')
+            body.style.background = 'green'
+            titu.innerText = 'Bem-Vindo !'
+            subtitu.innerText = 'Você passou no nosso teste de matemática!  :)'
+            button.innerText = 'Acesse a nossa plataforma'
+            button.style.background = 'yellow'
+        } else{
+            console.log('Você é uma pessoa inteligênte! só te falta conhecimento...')
+            body.style.background = 'red'
+            titu.innerText = 'Que Pena! Você Errou...'
+            subtitu.innerText = 'Você não passou em nosso teste de matemática. Se esforçe mais e tente da próxima vez! :)'
+            button.innerText = 'Volte para o início'
+            button.style.background = 'yellow'
+        }
+    </script>
+</body>
+</html>

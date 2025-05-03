@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body{
+            background-color: rgb(56, 56, 56);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #button{
+            width: 200px;
+            height: 60px;
+            font-size: 1.6vw;
+            padding: 3vw;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 2em;
+            transition: 0.3s;
+            margin: auto;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.636);
+        }
+        #button:hover{
+            transform: scale(1.1);
+            transition: 0.6s;
+        }
+        #p1{
+            text-align: center;
+            padding: 2em;
+            font-size: 1.7vw;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1></h1>
+    <div id="button"></div>
+    <p id="p1"></p>
+
+
+
+
+    <script>
+        let p = document.getElementById('p1')
+        let button =  document.getElementById('button')
+        let corpo = document.body
+        let idade = prompt('Digite a sua idade')
+        if( idade >= 18){
+            corpo.style.background = 'black'
+            button.innerText = 'Acesse o OnlyFans aqui...'
+            button.style.background = 'red'
+            p1.innerText = 'Você é uma pessoa maior de idade, assine o meu Only Fans e ganhe 30 dias grátis!!'
+            p1.style.color = 'white'
+        } else{
+            corpo.style.background = 'white'
+            button.innerText = 'Acesse o Youtube Kids aqui...'
+            button.style.background = 'red'
+            p1.innerText = 'Você é uma pessoa menor de idade, assista o Youtube Kids!!'
+            p1.style.color = 'black'
+        }
+
+    </script>
+
+
+</body>
+</html>
