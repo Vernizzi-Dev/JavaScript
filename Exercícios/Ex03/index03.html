@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando DOM</title>
+    <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3vw;
+            text-align: center;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2vw;
+            text-align: center;
+        }
+        button{
+            padding: 1vw;
+            width: 20vw;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 2.3vw;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <h2></h2>
+    <button></button>
+
+    <script>
+        let body = document.body
+        let t1 = document.getElementsByTagName('h1')
+        let sub = document.getElementsByTagName('h2')
+        let button = document.getElementsByTagName('button')
+
+        let nome = prompt('Digite o seu nome:')
+        let idade = prompt('Agora digite a sua idade:')
+        alert('Maravilha ' + nome + ' agora precisamos apenas do seu CPF e já estará tudo pronto para você acessar nosso site.  :)')
+        let cpf = prompt('Digite o seu CPF:')
+        let confirmar = prompt('CONFIRMAÇÃO:  Nome = ' + nome + ', idade = ' + idade + ' e CPF = ' + cpf + ' ? (se estiver tudo certo, digite "OK" se não digite "ERRADO")')
+
+        if( confirmar == 'OK'){
+            alert('Perfeito ' + nome + ', agora você pode acessar o nosso site tranquilamente.  :)')
+            body.style.background = 'lightblue'
+            t1.innerText = 'Seja Bem Vindo ' + nome + ' !!'
+            t1.style.color = 'blue'
+            sub.innerText = 'Aperte no botão abaixo para ter acesso ao nosso conteúdo'
+            sub.style.color =  'blue'
+            button.innerText = 'Acesse Aqui'
+            button.style.background = 'green'
+            button.style.color = 'white'
+        } else{
+            alert( nome + ' infelizmente armazenamos os seus dados errados, porém fique tranquilo, acesse essa página e siga as intruções')
+            body.style.background = '#ff7673'
+            t1.innerText = 'página de retorno'
+            t1.style.color = '#670010'
+            sub.innerText = 'Aperte no botão abaixo para retornar e reecolocar os seus dados corretamente'
+            sub.style.color =  '#670010'
+            button.innerText = 'Retorne Aqui'
+            button.style.background = 'red'
+            button.style.color = 'white'
+        }
+    </script>
+</body>
+</html>
