@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando addEventListener</title>
+    <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 3em;
+        }
+        div#botao{
+            background-color: blue;
+            width: 25%;
+            height: 15vw;
+            font-size: 8vw;
+            margin: auto;
+            padding: 2vw;
+            border-radius: 2vw;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.742);
+            text-align: center;
+            line-height: 15vw;
+            text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.593);
+        }
+    </style>
+</head>
+<body>
+    <h1>Interaja com o meu botão:</h1>
+
+    <div id="botao">
+        😁👍
+    </div>
+
+
+
+    <script>
+        let button = document.getElementById("botao")
+        button.addEventListener('mouseenter', entrar)
+        button.addEventListener('click', clicar)
+        button.addEventListener('mouseout', sair)
+
+        function entrar(){
+            button.innerText = '😐🫵'
+        }
+        function clicar(){
+            button.innerText = '😫✋'
+        }
+        function sair(){
+            button.innerText = ' 😁👍'
+        }
+    </script>
+</body>
+</html>
