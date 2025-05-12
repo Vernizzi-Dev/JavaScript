@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palmeiras</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&display=swap');
+
+
+        body{
+            background-color:rgb(149, 255, 188) ;
+            font-family: "Racing Sans One", sans-serif;
+            -webkit-text-stroke: 0.3px rgb(7, 79, 51);
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.447);
+            color: rgb(33, 141, 105);
+        }
+        h1{
+            font-size: 5vw;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        h2{
+            font-size: 2.6vw;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        hr{
+            height: 3px;
+            border: none;
+            background-color: rgb(7, 79, 51);
+        }
+        .palmeiras{
+            margin: auto;
+            width: 400px;
+            height: 300px;
+            padding: 30px;
+            background-color: rgb(34, 144, 102) ;
+            border-radius: 3vw;
+            box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.56);
+            transition: 0.3s;
+        }
+        .img{
+            background-image: url(img/Palmeiras_logo.svg.png);
+            width: 250px;
+            height: 250px;
+            margin: auto;
+            filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.723));
+            margin-top: 23px;
+            background-position: center center;
+            background-size: 250px;
+        }
+        #h2, #h22, #h222{
+            color: white;
+            -webkit-text-stroke: 0.5px rgb(7, 79, 51);
+            margin-top: 20px;
+            margin-bottom: 0px;
+            cursor: default;
+        }
+        #h2, #h222{
+            cursor: pointer;
+            font-size: 2.5em;
+            transition: 0.3s;
+        }
+        #h2:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        #h222:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        .infor{
+            display: flex;
+            justify-content: space-evenly;
+            color: rgb(146, 255, 217);
+        }
+        .infor2{
+            display: flex;
+            justify-content: space-around;
+            color: white;
+            margin-bottom: 25px;
+        }
+        #num9{
+            font-size: 1.6vw;
+        }
+        button{
+            display: none;
+            background-color:rgb(149, 255, 188);
+            width: 200px;
+            height: 80px;
+            border: none;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.375);
+            font-size: 2.2vw;
+            font-weight: bolder;
+            color: rgb(12, 91, 61)  ;
+            transition: 0.3s;
+            cursor: pointer;
+            margin: auto;
+        }
+        button:hover{
+            border-radius: 3vw;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body onmouseenter="entrar2()">
+    <h1>Palmeiras</h1>
+    <h2>Avante Palestra</h2>
+    <hr>
+    <h2 class="paginas">Início</h2>
+    <div class="palmeiras" onmouseenter="entrar()">
+        <div class="img"></div>
+        <h2 id="h2" onclick="clicar1()"></h2>
+        <h2 id="h22"></h2>
+        <h2 id="h222" onclick="clicar2()"></h2>
+        <div class="infor">
+            <h2 id="pts"></h2>
+            <h2 id="pj"></h2>
+            <h2 id="vit"></h2>
+            <h2 id="e"></h2>
+            <h2 id="der"></h2>
+            <h2 id="gm"></h2>
+            <h2 id="gc"></h2>
+            <h2 id="sg"></h2>
+            <h2 id="ult-5"></h2>
+        </div>
+        <div class="infor2">
+            <h2 id="num1"></h2>
+            <h2 id="num2"></h2>
+            <h2 id="num3"></h2>
+            <h2 id="num4"></h2>
+            <h2 id="num5"></h2>
+            <h2 id="num6"></h2>
+            <h2 id="num7"></h2>
+            <h2 id="num8"></h2>
+            <h2 id="num9"></h2>
+        </div>
+        <button onclick="clicarbutton()"></button>
+    </div>
+
+
+    <script>
+        let aba = document.querySelector('h2.paginas')
+        let palmeiras = document.querySelector('div.palmeiras')
+        let brasil = document.getElementById('h2')
+        let ou = document.getElementById('h22')
+        let liberta = document.getElementById('h222')
+        let pts = document.querySelector('h2#pts')
+        let pj = document.querySelector('h2#pj')
+        let vit = document.querySelector('h2#vit')
+        let e = document.querySelector('h2#e')
+        let der = document.querySelector('h2#der')
+        let gm = document.querySelector('h2#gm')
+        let gc = document.querySelector('h2#gc')
+        let sg = document.querySelector('h2#sg')
+        let ult5 = document.querySelector('h2#ult-5')
+        let num1 = document.querySelector('h2#num1')
+        let num2 = document.querySelector('h2#num2')
+        let num3 = document.querySelector('h2#num3')
+        let num4 = document.querySelector('h2#num4')
+        let num5 = document.querySelector('h2#num5')
+        let num6 = document.querySelector('h2#num6')
+        let num7 = document.querySelector('h2#num7')
+        let num8 = document.querySelector('h2#num8')
+        let num9 = document.querySelector('h2#num9')
+        let button = document.getElementsByTagName('button')[0]
+        let img = document.querySelector('div.img')
+
+        function entrar(){
+            aba.innerHTML = 'Últimas Partidas'
+            palmeiras.style.height =  '500px'
+            palmeiras.style.width = '500px'
+            brasil.innerText = 'Brasileirão'
+            ou.innerText = 'ou'
+            liberta.innerText = 'Libertadores'
+        }
+        function clicar1(){
+            brasil.innerText = 'Brasileirão'
+            ou.innerText = ''
+            liberta.innerText = ''
+            palmeiras.style.width = '1000px'
+            palmeiras.style.height = '700px'
+            pts.innerText = 'Pts'
+            pj.innerText = 'Pj'
+            vit.innerText = 'Vit'
+            e.innerText = 'E'
+            der.innerText = 'Der'
+            gm.innerText = 'Gm'
+            gc.innerText = 'Gc'
+            sg.innerText = 'Sg'
+            ult5.innerText = 'Ultimas 5'
+            num1.innerText = '16'
+            num2.innerText = '7'
+            num3.innerText = '5'
+            num4.innerText = '1'
+            num5.innerText = '1'
+            num6.innerText = '8'
+            num7.innerText = '3'
+            num8.innerText = '5'
+            num9.innerText = '✅ ✅ ✅ ❌ ✅'
+            button.style.display = 'block'
+            button.innerText = 'Voltar'
+        }
+        function clicarbutton(){
+            aba.innerHTML = 'Últimas Partidas'
+            palmeiras.style.height =  '500px'
+            palmeiras.style.width = '500px'
+            brasil.innerText = 'Brasileirão'
+            ou.innerText = 'ou'
+            liberta.innerText = 'Libertadores'
+            pts.innerText = ''
+            pj.innerText = ''
+            vit.innerText = ''
+            e.innerText = ''
+            der.innerText = ''
+            gm.innerText = ''
+            gc.innerText = ''
+            sg.innerText = ''
+            ult5.innerText = ''
+            num1.innerText = ''
+            num2.innerText = ''
+            num3.innerText = ''
+            num4.innerText = ''
+            num5.innerText = ''
+            num6.innerText = ''
+            num7.innerText = ''
+            num8.innerText = ''
+            num9.innerText = ''
+            button.style.display = 'none'
+            button.innerText = ''
+        }
+    </script>
+</body>
+</html>
