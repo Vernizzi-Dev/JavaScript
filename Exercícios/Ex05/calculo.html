@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Vernizzi</title>
+    <style>
+        body{
+            position: relative;
+        }
+        h1{
+            font-size: 3.5vw;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(131, 74, 228);
+            text-align: center;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.315);
+        }
+        h2{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(115, 62, 206) ;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.312);
+        }
+        input{
+            border: 2px solid rgb(144, 80, 255);
+            padding: 0.6vw;
+            border-radius: 2vw;
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.382);
+            margin-top: 5vw;
+        }
+        input:focus{
+            outline: none;
+        }
+        #input1{
+            margin-left:34% ;
+        }
+        span{
+            font-size: 1.6vw;
+            font-weight: bolder;
+        }
+        #soma{
+            position: absolute;
+            right: 29vw;
+            top: 9.6vw;
+            background-color: rgb(144, 80, 255);
+            color: white;
+            font-weight: bolder;
+            padding: 1vw;
+            transition: 0.1s;
+        }
+        #soma:hover{
+            padding: 0.7vw;
+            top: 9.9vw ;
+            right: 29.6vw;
+            transition: 0.3s;
+        }
+        #result{
+            display: none;
+            margin: auto;
+            box-shadow: 7px 7px 14px rgba(0, 0, 0, 0.434);
+            width: 20vw;
+            margin-top: 6vw;
+            padding: 1.6vw;
+            border-radius: 0.7vw;
+            border: 2px solid  rgb(144, 80, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: bolder;
+            color: rgb(93, 44, 177) ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vernizzi Somas</h1>
+    <h2>Digite os números que deseja somar a baixo e veja o resultado:</h2>
+    <input type="number" id="input1" name="input1"> <span>+</span>
+    <input type="number" id="input2" name="input2">
+    <input type="button" value="SOMAR" id="soma" onclick="somar()">
+    <div id="result"></div>
+
+
+    <script>
+
+        function somar(){
+            let input1 = document.querySelector('input#input1')
+            let input2 = document.querySelector('input#input2')
+            let num1 = Number(input1.value)
+            let num2 = Number(input2.value)
+            let soma = document.querySelector('input#soma')
+            let result = document.querySelector('div#result')
+
+            soma = num1 + num2
+
+            result.innerHTML = `O resultado da sua soma é ${soma}`
+            result.style.display = 'block'
+        }
+
+    </script>
+</body>
+</html>
