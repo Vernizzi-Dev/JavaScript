@@ -20,6 +20,7 @@
             font-family: Arial, Helvetica, sans-serif;
             color: rgb(115, 62, 206) ;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.312);
+            font-size: 1.8vw;
         }
         input{
             border: 2px solid rgb(144, 80, 255);
@@ -32,7 +33,7 @@
             outline: none;
         }
         #input1{
-            margin-left:34% ;
+            margin-left:33% ;
         }
         span{
             font-size: 1.6vw;
@@ -40,7 +41,7 @@
         }
         #soma{
             position: absolute;
-            right: 29vw;
+            right: 30vw;
             top: 9.6vw;
             background-color: rgb(144, 80, 255);
             color: white;
@@ -51,7 +52,7 @@
         #soma:hover{
             padding: 0.7vw;
             top: 9.9vw ;
-            right: 29.6vw;
+            right: 30.4vw;
             transition: 0.3s;
         }
         #result{
@@ -67,6 +68,72 @@
             text-align: center;
             font-weight: bolder;
             color: rgb(93, 44, 177) ;
+        }
+        @media (max-width: 550px) {
+
+            body{
+                position: relative;
+            }
+            h1{
+                font-size: 43px;
+            }
+            h2{
+                font-size: 27px;
+                text-align: justify;
+                width: 80%;
+                margin: auto;
+            }
+            #input1{
+                display: block;
+                margin: auto;
+                margin-top: 10vw;
+                padding: 15px;
+                border-radius: 4vw;
+                text-align: center;
+                font-size: 19px;
+            }   
+            span{
+                display: block;
+                margin: auto;
+                margin-top: 10px;
+                font-size: 35px;
+                font-weight: bolder;
+                text-align: center;
+                
+            }
+            #input2{
+                display: block;
+                margin: auto;
+                margin-top: 10px;
+                padding: 15px;
+                border-radius: 4vw;
+                text-align: center;
+                font-size: 19px;
+            }
+            #soma{
+                position: absolute;
+                padding: 15px;
+                font-size: 20px;
+                width: 62%;
+                left: 50% ;
+                transform: translate(-50%);
+                top: 390px;
+            }
+            #soma:hover{
+                position: absolute;
+                padding: 15px;
+                font-size: 20px;
+                width: 62%;
+                left: 50% ;
+                transform: translate(-50%);
+                top: 390px;
+            }
+            #result{
+                margin-top: 115px;
+                width: 60%;
+                padding: 15px;
+                font-size: 20px;
+            }
         }
     </style>
 </head>
