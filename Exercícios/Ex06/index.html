@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{
+            background-image: linear-gradient(90deg, rgb(67, 67, 67), rgb(104, 104, 104));
+        }
+        h1{
+            text-align: center;
+            padding: 1vw;
+            font-size: 5vw;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 1vw 1vw 1.5vw rgba(0, 0, 0, 0.353);
+            -webkit-text-stroke: 2px rgb(13, 0, 255);
+            color: rgb(255, 255, 255);
+        }
+        input#txtvel{
+            padding: 10px;
+            border: solid 2px rgb(13, 0, 255) ;
+            border-radius: 1vw;
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.436);
+        }
+        #span-vel{
+            font-size: 2.5vw;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            -webkit-text-stroke: 0.7px rgb(13, 0, 255);
+            margin-left: 27vw;
+            margin-right: 1vw;
+        }
+        span#km{
+            margin-left: 1vw;
+            font-size: 2.5vw;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            -webkit-text-stroke: 0.7px rgb(13, 0, 255);
+            margin-right: 1vw;
+        }
+        input#verifi{
+            display: block;
+            margin: auto;
+            width: 15vw;
+            height: 5vw;
+            border-radius: 2vw;
+            box-shadow: 10px 10px 17px rgba(0, 0, 0, 0.338);
+            font-size: 2vw;
+            color: white;
+            cursor: pointer;
+            font-weight: bolder;
+            border: none;
+            background-image: linear-gradient(to left, rgb(123, 195, 218), darkblue);
+            margin-top:5vw;
+        }
+        input#verifi:hover{
+            transition: 0.6s;
+            background-image: linear-gradient(to right,  rgb(123, 195, 218), darkblue);
+            transform:translateY(-0.5vw);
+        }
+        div.result{
+            color: white;
+            margin: auto;
+            text-align: center;
+            font-size: 1.6vw;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 4vw;
+        }
+        span#multa{
+            color: rgb(153, 30, 30);
+        }
+        span#bravo{
+            font-size: 3vw;
+            text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.448);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <span id="span-vel">Velocidade do Carro:</span> <input type= "number" id="txtvel"><span id="km">Km/h</span> <input type="button" id="verifi" value="Verificar" onclick="calcular()">
+
+    <div class="result">
+
+    </div>
+
+    <script>
+
+        function calcular(){
+            let txtv = document.querySelector('input#txtvel')
+            let vel = Number(txtv.value)
+            let result = document.querySelector('div.result')
+
+            result.innerHTML = `Você está dirigindo á ${vel}Km/h <br>`
+            result.innerHTML += 'Obs: Ande sempre com o  <strong>Cinto de Segurança!.</strong> <br>'
+
+            if ( vel > 60){
+                result.innerHTML += 'Você ultrapassou o limite de velocidade.<span id="multa"><strong>MULTADO!!</strong></span> <br> '
+                result.innerHTML += '<span id="bravo">😡</span>'
+            }   
+        }
+    </script>
+</html>
